@@ -1,0 +1,652 @@
+/* RESET */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* FUNDO */
+
+#fundo-header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-image: url(../img/laranjatdah.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  min-height: 100vh;
+}
+
+
+
+/* NAVBAR */
+
+.navbar {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 10px;
+  z-index: 1000;
+}
+
+
+
+/* LOGO */
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 55px;
+  height: auto;
+}
+
+.logo span {
+  color: #ff8a00;
+}
+
+
+
+/* MENU DESKTOP*/
+
+.menu-desktop {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-desktop a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu-desktop a:hover {
+  color: #ff8a00;
+}
+
+/* MENU MOBILE ESCONDIDO */
+.menu-mobile {
+  display: none;
+}
+
+/* BOTÃO 3 PONTOS */
+#btn-menu {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* LINKS */
+.dropdown a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ATIVO */
+.dropdown.ativo {
+  display: flex;
+}
+
+
+
+/* BOTÃO NAVBAR */
+
+.btn-testar {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  background: #ff8a00;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+/* HERO */
+
+.hero {
+  scroll-margin-top: 120px;
+  min-height: 100vh; /* ocupa a tela inteira */
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1100px;
+  min-height: calc(100vh - 100px); /* ajusta altura da navbar */
+  margin: 0 auto;
+}
+
+
+
+/* CAIXA */
+
+.hero-box {
+  background: white;
+  border-radius: 25px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* LADO ESQUERDO */
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-left span {
+  color: #ff8a00;
+}
+
+.hero-left p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+
+/* LADO DIREITO */
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* IMAGEM */
+
+.hero-right img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+
+
+/* BOTÕES DIREITA */
+
+.botoes-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+}
+
+
+
+/* BOTÕES */
+
+.btn-primario {
+  text-align: center;
+  text-decoration: none;
+  background: #ff8a00;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+.btn-secundario {
+  background: #ffe0b3;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+
+.btn-outline {
+  text-align: center;
+  text-decoration: none;
+  background: white;
+  border: 2px solid #ff8a00;
+  color: #ff8a00;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+
+/* DIFERENCIAL */
+#diferencial {
+  scroll-margin-top: 100px;
+  min-height: 100vh; /* ocupa a tela inteira */
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1100px;
+   min-height: calc(100vh - 100px); /* ajusta altura da navbar */
+   margin: 0 auto;
+  }
+  
+  /* caixa branca igual ao hero */
+  .dif-box {
+    background: #f5f5f5;
+    border-radius: 25px;
+    padding: 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  /* LADO ESQUERDO */
+  .dif-left {
+    flex: 1;
+  }
+  
+  .dif-left img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+  }
+
+  /* LADO DIREITO */
+  .dif-right {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .dif-right h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .dif-right p {
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  /* botão */
+  .dif-right .btn-primario {
+    margin-top: 10px;
+  }
+
+
+
+  /* FUNCIONALIDADES */
+
+  #funcionalidades {
+    position: relative;
+    scroll-margin-top: 180px;
+    min-height: calc(100vh - 100px);
+    scroll-snap-align: start;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 50px 30px;
+    width: 90%;
+    max-width: 1100px;
+    align-items: stretch;
+    margin: 0 auto;
+  }
+
+  #funcionalidades::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    background-image: url(../img/folha-direita.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  #funcionalidades::after{
+    content: "";
+    position: absolute;
+    right: -100px;
+    bottom: 220px;
+    width: 120px;
+    height: 120px;
+    background-image: url(../img/folha-esquerda.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  
+  /* container das 3 colunas */
+  .func-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  /* cada item */
+  .func-item {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  /* imagem */
+  .func-item img {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 15px;
+  }
+  
+  #funcionalidades h2 {
+    margin-bottom: 40px;
+    font-size: 25pt;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* título */
+  .func-item h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  
+  }
+  
+  /* texto */
+  .func-item p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .func-item {
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .func-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 55px;
+  
+    width: 3px;
+    height: 120px;
+  
+    background: orange;
+  }
+
+
+
+  .contato {
+  background-image: url(../img/laranjatdah.jpg);
+  background-size: cover;
+  background-position: center;
+  scroll-margin-top: 120px;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+}
+
+.form-contato {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.linha {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.linha input {
+  flex: 1;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+.form-contato textarea {
+  margin-bottom: 15px;
+  height: 100px;
+}
+
+.form-contato button {
+  background: #ff8a00;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.footer {
+  background: #eee;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-col {
+  min-width: 150px;
+}
+
+.footer-col h3 {
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.footer img {
+  width: 80px;
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 30px;
+  background: #ff8a00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+    position: relative;
+  }
+
+  .btn-testar {
+    display: none;
+  }
+
+  /* HERO */
+  .hero-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right img {
+    width: 150px;
+  }
+
+  .botoes-direita {
+    width: 100%;
+  }
+
+  /* DIFERENCIAL */
+  .dif-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dif-left img {
+    max-width: 100%;
+  }
+
+  /* FUNCIONALIDADES */
+  .func-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .func-item {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #funcionalidades::before,
+  #funcionalidades::after {
+    display: none;
+  }
+
+  /* remove as linhas laterais no mobile */
+  .func-item::before {
+    display: none;
+  }
+
+  /* CONTATO */
+  .linha {
+    flex-direction: column;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+    position: relative;
+  }
+
+  .btn-testar {
+    display: none;
+  }
+
+  .hero-box {
+    gap: 20px;
+  }
+
+  .dif-box {
+    gap: 20px;
+  }
+
+  .func-container {
+    justify-content: center;
+  }
+
+  #funcionalidades::before,
+  #funcionalidades::after {
+    display: none;
+  }
+
+  .func-item::before {
+    display: none;
+  }
+
+  .func-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

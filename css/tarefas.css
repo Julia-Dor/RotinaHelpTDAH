@@ -1,0 +1,533 @@
+body{
+font-family: Arial, sans-serif;
+background:#e9edf1;
+margin:0;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: static;
+  z-index: 1000;
+}
+
+
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo img {
+  width: 55px;
+  height: auto;
+}
+
+.logo span {
+  color: #ff8a00;
+}
+
+
+
+/* MENU DESKTOP*/
+
+.menu-desktop {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-desktop a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu-desktop a:hover {
+  color: #ff8a00;
+}
+
+/* MENU MOBILE ESCONDIDO */
+.menu-mobile {
+  display: none;
+}
+
+/* BOTÃO 3 PONTOS */
+#btn-menu {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* LINKS */
+.dropdown a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ATIVO */
+.dropdown.ativo {
+  display: flex;
+}
+
+
+/* BOTÃO NAVBAR */
+
+.btn-testar {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  background: #ff8a00;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-teste{
+background:#ffa726;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:20px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.btn-teste:hover{
+opacity:0.85;
+}
+
+.interface-centro {
+    max-width: 1100px; 
+    margin: 0 auto;   
+    padding: 0 20px;  
+}
+
+/* Topo */
+
+.topo{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0px;
+}
+
+.btn-nova{
+background:#3aa0d8;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:8px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.btn-nova:hover{
+background:#2b8cc2;
+}
+
+/* Kanban */
+
+.kanban{
+display:flex;
+gap:20px;
+padding:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.coluna{
+width:320px;
+min-height: 500px;
+border-radius:15px;
+padding:20px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+border-top: 5px solid transparent;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.coluna h3{
+    margin-bottom: 5px;
+    color: #455a64;
+    font-size: 22px;
+}
+
+.contador{
+    color: #ffa726;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    width: 100%;
+    text-align: center;
+padding-bottom: 10px;
+}
+
+
+/* Cores das colunas */
+
+#fazer { background: #e3f2fd; border-top-color: #3aa0d8; }
+#fazendo { background: #fff3e0; border-top-color: #ffb74d; }
+#feito { background: #e8f5e9; border-top-color: #81c784; }
+
+.lista{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Tarefa */
+
+.tarefa{
+background:white;
+padding:18px;
+border-radius:12px;
+font-size: 16px;
+margin-bottom:10px;
+box-shadow:0 2px 4px rgba(0,0,0,0.05);
+transition:0.2s;
+width: 100%;
+box-sizing: border-box;
+}
+
+.tarefa:hover{
+transform:scale(1.01);
+}
+
+.tarefa p{
+margin:0 0 6px 0;
+font-size:14px;
+}
+
+/* checklist dentro da tarefa */
+
+.checklist{
+margin-top:8px;
+padding-left:18px;
+}
+
+.checklist li{
+font-size:13px;
+margin-bottom:4px;
+list-style: none;
+}
+
+.checklist input{
+margin-right:5px;
+}
+
+/* prioridade visual no card */
+
+.prioridade-alta{
+border-left:4px solid #e74c3c;
+}
+
+.prioridade-media{
+border-left:4px solid #f39c12;
+}
+
+.prioridade-baixa{
+border-left:4px solid #3498db;
+}
+
+
+.tag-prioridade {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.tag-alta { background: #f48fb1; color: #ad1457; }
+.tag-media { background: #ffe0b2; color: #e65100; }
+.tag-baixa { background: #81d4fa; color: #0277bd; }
+
+.tarefa .btn-mover {
+    background: #ffa726 !important; 
+    border-radius: 8px;
+    padding: 6px 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#fazendo .btn-mover {
+    background: #66bb6a !important; 
+}
+
+.btn-remover {
+    background: #cfd8dc !important;
+    color: #546e7a !important;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* Overlay */
+
+.overlay{
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.3);
+display:none;
+justify-content:center;
+align-items:center;
+top:0;
+left:0;
+z-index:1000;
+}
+
+/* Modal */
+
+.modal{
+background:white;
+width:460px;
+padding:25px;
+border-radius:12px;
+position:relative;
+box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+animation:fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn{
+from{transform:translateY(10px); opacity:0;}
+to{transform:translateY(0); opacity:1;}
+}
+
+.modal h2{
+margin-top:0;
+margin-bottom:15px;
+font-size:18px;
+}
+
+.modal input[type="text"]{
+width:100%;
+padding:8px;
+border-radius:6px;
+border:1px solid #ccc;
+margin-bottom:10px;
+}
+
+.fechar{
+position:absolute;
+top:10px;
+right:10px;
+background:#eee;
+border:none;
+width:30px;
+height:30px;
+border-radius:50%;
+cursor:pointer;
+font-size:16px;
+}
+
+/* Passos */
+
+.passo{
+display:flex;
+gap:8px;
+background:#f8f8f8;
+padding:6px;
+margin-bottom:8px;
+border-radius:6px;
+align-items:center;
+}
+
+.adicionar-passo{
+cursor:pointer;
+font-size:18px;
+}
+
+.passo.concluido{
+opacity:0.6;
+background:#e8f5e9;
+}
+
+.passo.concluido input{
+text-decoration:line-through;
+color:#999;
+}
+
+/* Prioridades no modal */
+
+.prioridades{
+display:flex;
+justify-content:space-between;
+margin-top:10px;
+}
+
+.prioridades button{
+border:none;
+padding:8px 16px;
+border-radius:8px;
+font-size:12px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.urgente{background:#f6b6b6;}
+.moderado{background:#f6c27a;}
+.esperar{background:#8ec9f2;}
+
+.prioridades button.selecionado{
+outline:2px solid #333;
+}
+
+/* Ações do modal */
+
+.acoes{
+display:flex;
+justify-content:flex-end;
+gap:10px;
+margin-top:15px;
+}
+
+.acoes button{
+border:none;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.cancelar{
+background:#d1d5db;
+}
+
+.salvar{
+background:#3aa0d8;
+color:white;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    }
+ 
+    .menu-desktop {
+    display: none;
+    }
+
+    .menu-mobile {
+    display: block;
+    position: relative;
+    }
+
+    .btn-testar {
+    display: none;
+    }
+
+    .topo {
+        flex-direction: column; 
+        gap: 15px;
+        text-align: center;
+    }
+
+    #saudacao {
+        font-size: 18px;
+    }
+
+    .kanban {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna {
+        width: 100%; 
+        max-width: 350px;
+        min-height: auto;
+    }
+
+    .modal {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .prioridades {
+        flex-wrap: wrap; 
+        gap: 10px;
+    }
+
+    .prioridades button {
+        width: 48%;
+    }
+}
+
+    /* FIZ PARA QUE A QUEBRA FICASSE BONITA */
+    @media (max-width: 860px) {
+    .menu-desktop, .btn-testar {
+        display: none; 
+    }
+
+    .menu-mobile {
+        display: block; 
+    }
+
+    .kanban {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px; 
+    }
+
+    .coluna {
+        width: 100%;
+        max-width: 450px; 
+        min-height: auto;
+    }
+
+    .topo {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    #saudacao {
+        font-size: 20px;
+    }
+}
+
+
+
+

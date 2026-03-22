@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tarefas.css">
+    <title>Tarefas - RotinaHelpTDAH</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+<header class="navbar">
+
+<a href="index.html" class="logo">
+  <img src="img/logo.png" alt="Logo RotinaHelpTDAH">
+  <span>RotinaHelpTDAH</span>
+</a>
+
+<nav class="menu-desktop">
+<a href="#diferencial">Diferencial</a>
+<a href="#funcionalidades">Funcionalidades</a>
+<a href="#contato">Contato</a>
+<a href="login.html">Login</a>
+</nav>
+
+<a href="tarefas.html" class="btn-testar">Testar agora</a>
+
+<div class="menu-mobile">
+  <button id="btn-menu">⋮</button>
+
+  <div id="dropdown" class="dropdown">
+  <a href="index.html#diferencial">Diferencial</a>
+  <a href="index.html#funcionalidades">Funcionalidades</a>
+  <a href="index.html#contato">Contato</a>
+  <a href="login.html">Login</a>
+  </div>
+</div>
+</header>
+
+<div class="interface-centro">
+<div class="topo">
+    <h2 id="saudacao"></h2>
+    <button class="btn-nova" onclick="abrirModal()">+ Nova tarefa</button>
+    </div>
+</div>
+
+    <div class="kanban">
+
+    <div class="coluna" id="fazer">
+    <h3>Fazer</h3>
+    <span class="contador" id="cont-fazer">0 tarefas</span>
+    <div class="lista"></div>
+    </div>
+
+    <div class="coluna" id="fazendo">
+    <h3>Fazendo</h3>
+    <span class="contador" id="cont-fazendo">0 tarefas</span>
+    <div class="lista"></div>
+    </div>
+
+    <div class="coluna" id="feito">
+    <h3>Feito</h3>
+    <span class="contador" id="cont-feito">0 tarefas</span>
+    <div class="lista"></div>
+    </div>
+
+    </div>
+
+    <div class="overlay">
+    <div class="modal">
+
+    <button class="fechar">×</button>
+
+    <h2>O que está ocupando a sua mente agora?</h2>
+
+    <label class="label">Título da Tarefa</label>
+    <input type="text" id="tituloTarefa" placeholder="Escrever tarefa...">
+
+    <div class="checkbox-area">
+    <input type="checkbox" id="passos">
+    <label for="passos">Quer dividir em passos menores?</label>
+    </div>
+
+    <div class="passos" style="display:none;">
+    <div class="passo">
+        <span class="adicionar-passo">+</span>
+        <input type="text" placeholder="Novo passo...">
+        <button class="play">▶</button>
+        <button class="excluir" style="display:none;">✕</button>
+    </div>
+    </div>
+
+    <div class="prioridades">
+    <button class="urgente">Urgente</button>
+    <button class="moderado">Moderado</button>
+    <button class="esperar">Pode esperar</button>
+    </div>
+
+    <div class="acoes">
+    <button class="cancelar">Cancelar</button>
+    <button class="salvar">Salvar Tarefa</button>
+    </div>
+
+    </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
