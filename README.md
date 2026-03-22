@@ -1,6 +1,8 @@
 O RotinaHelpTDAH é um gerenciador de tarefas estilo Kanban, projetado especificamente para auxiliar pessoas com TDAH a organizar sua rotina de forma visual, intuitiva e sem distrações.
 
-Funcionalidades
+Funcionalidades:
+
+
 Quadro Kanban Intuitivo: Divisão clara entre "Fazer", "Fazendo" e "Feito".
 
 Gestão de Passos (Checklist): Permite quebrar tarefas grandes em pequenos passos, facilitando a execução.
